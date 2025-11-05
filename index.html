@@ -3,83 +3,61 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tableau 임베딩 • 깔끔한 GitHub Pages 템플릿</title>
-    <meta name="description" content="GitHub Pages에서 Tableau 시각화를 임베딩하기 위한 미니멀 HTML 템플릿" />
+    <title>Tableau 시각화 임베딩 예시</title>
     <style>
       :root{
         --bg: #ffffff; --fg: #0f172a; --muted:#64748b; --card:#f8fafc; --line:#e2e8f0; --accent:#0ea5e9;
       }
-      @media (prefers-color-scheme: dark){
-        :root{ --bg:#0b1020; --fg:#e5e7eb; --muted:#94a3b8; --card:#0f172a; --line:#1f2937; --accent:#22d3ee; }
-      }
-      *{box-sizing:border-box}
-      html,body{height:100%}
       body{
         margin:0; background:var(--bg); color:var(--fg);
-        font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Apple SD Gothic Neo, '맑은 고딕', Arial, sans-serif;
-        -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", Arial, sans-serif;
       }
-      .container{ max-width: 960px; margin: 0 auto; padding: 24px; }
-      header{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom: 20px; }
-      .title{ font-size: clamp(20px, 4vw, 28px); font-weight: 800; letter-spacing:-0.02em; }
-      .subtitle{ color:var(--muted); font-size: 14px; }
-      .card{ background:var(--card); border:1px solid var(--line); border-radius: 16px; padding: 16px; box-shadow: 0 1px 0 rgba(0,0,0,.03); }
-      .viz-wrap{ position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: #00000008; }
-      .viz-wrap > *{ position:absolute; inset:0; width:100%; height:100%; border:0; display:block; }
-      details{ margin-top: 12px; }
-      summary{ cursor:pointer; color:var(--muted) }
-      code, pre{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 13px; }
-      footer{ margin: 24px 0; color: var(--muted); font-size: 13px; display:flex; gap:8px; align-items:center; }
-      .badge{ display:inline-flex; align-items:center; gap:6px; padding: 4px 10px; border-radius: 999px; background:var(--line); color:var(--muted); font-weight:600; font-size:12px }
-      .tip{ border-left: 3px solid var(--accent); padding: 8px 12px; background: color-mix(in srgb, var(--accent) 8%, transparent); border-radius: 8px; }
-      a{ color: var(--accent); text-decoration: none; }
-      a:hover{ text-decoration: underline; }
+      .container{max-width:960px;margin:0 auto;padding:24px;}
+      .title{font-size:26px;font-weight:700;margin-bottom:10px;}
+      .subtitle{color:var(--muted);margin-bottom:24px;}
+      .viz-wrap{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;}
     </style>
   </head>
+
   <body>
     <div class="container">
-      <header>
-        <div>
-          <div class="title">Tableau 시각화 임베딩</div>
-          <div class="subtitle">GitHub Pages에서 반응형으로 보기 좋게</div>
+      <div class="title">Tableau 시각화 임베딩</div>
+      <div class="subtitle">GitHub Pages에서 반응형으로 표시</div>
+
+      <div class="viz-wrap">
+        <div class='tableauPlaceholder' id='viz1762347794432' style='position: relative'>
+          <noscript>
+            <a href='#'><img alt='시트 5 ' src='https://public.tableau.com/static/images/1_/1_17610315039680/5/1_rss.png' style='border: none' /></a>
+          </noscript>
+          <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='1_17610315039680/5' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https://public.tableau.com/static/images/1_/1_17610315039680/5/1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='ko-KR' />
+          </object>
         </div>
-        <span class="badge" aria-label="responsive layout">Responsive</span>
-      </header>
 
-      <section class="card" aria-labelledby="viz-title">
-        <h2 id="viz-title" style="margin:4px 0 12px 0; font-size:18px">시각화</h2>
-        <div class="viz-wrap" id="viz-container">
-          <!-- <div class='tableauPlaceholder' id='viz1762347794432' style='position: relative'><noscript><a href='#'><img alt='시트 5 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;1_&#47;1_17610315039680&#47;5&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='1_17610315039680&#47;5' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;1_&#47;1_17610315039680&#47;5&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='ko-KR' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1762347794432');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script> -->
-        </div>
+        <script type='text/javascript'>
+          var divElement = document.getElementById('viz1762347794432');
+          var vizElement = divElement.getElementsByTagName('object')[0];
+          vizElement.style.width='100%';
+          vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+          var scriptElement = document.createElement('script');
+          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+      </div>
 
-        <details>
-          <summary>임베딩 팁 보기</summary>
-          <div style="margin-top:8px" class="tip">
-            <ul style="margin: 8px 0 0 18px; padding:0">
-              <li>Tableau Public/Server에서 <strong>Share → Embed Code</strong>를 복사해 위 컨테이너 안에 붙여넣으세요.</li>
-              <li>붙여넣는 코드가 <code>&lt;iframe&gt;</code>이면 스타일을 쓰지 않아도 자동으로 꽉 찹니다.</li>
-              <li>여러 시각화를 세로로 배치하려면 <code>.card</code> 블록을 복제해 사용하세요.</li>
-              <li>페이지 폭은 960px로 제한되어 있어 가독성이 좋습니다. 필요하면 <code>.container</code>의 <code>max-width</code>를 조정하세요.</li>
-            </ul>
-          </div>
-        </details>
-      </section>
 
-      <footer>
-        <span>©</span><span id="year"></span><span>• 깔끔한 임베딩 템플릿</span>
-      </footer>
     </div>
-
-    <script>
-      // 현재 연도 표기
-      document.getElementById('year').textContent = new Date().getFullYear();
-
-      // 만약 Tableau의 스크립트가 동적으로 iframe을 추가하더라도, 
-      // 이 컨테이너는 절대크기 대신 aspect-ratio 기반이므로 반응형을 유지합니다.
-      // 추가로, 붙여넣은 iframe에 height/width가 인라인으로 고정돼 있으면 제거해도 됩니다.
-      // 예시:
-      // const iframe = document.querySelector('#viz-container iframe');
-      // if (iframe) { iframe.removeAttribute('width'); iframe.removeAttribute('height'); }
-    </script>
   </body>
 </html>
